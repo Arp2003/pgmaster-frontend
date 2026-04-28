@@ -2,7 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query'
 import { useAuthStore } from '@/hooks/useAuth'
-import { paymentsAPI, complaintsAPI } from '@/lib/api-endpoints'
+import { complaintsAPI } from '@/lib/api-endpoints'
 import client from '@/lib/api-client'
 import { CreditCard, AlertCircle, Utensils, ArrowRight } from 'lucide-react'
 
