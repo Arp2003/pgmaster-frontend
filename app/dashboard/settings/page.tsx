@@ -36,7 +36,7 @@ export default function AdminSettingsPage() {
     },
   })
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<PGSettingsFormData>({
+  const { register, handleSubmit, formState: { errors } } = useForm<PGSettingsFormData>({
     resolver: zodResolver(pgSettingsSchema),
     defaultValues: {
       property_name: settings?.data?.property_name || '',
