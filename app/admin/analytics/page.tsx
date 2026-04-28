@@ -14,7 +14,7 @@ const adminAPI = {
 const COLORS = ['#4f46e5', '#10b981', '#f59e0b', '#ef4444']
 
 export default function AdminAnalytics() {
-  const { data: analytics, isLoading } = useQuery({
+  const { isLoading } = useQuery({
     queryKey: ['admin-analytics'],
     queryFn: () => adminAPI.getPlatformAnalytics(),
   })
