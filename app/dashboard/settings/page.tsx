@@ -31,7 +31,7 @@ export default function AdminSettingsPage() {
   const { data: settings, isLoading } = useQuery({
     queryKey: ['pgSettings'],
     queryFn: async () => {
-      const response = await client.get(('/pg/profile/')
+      const response = await client.get('/pg/profile/')
       return response.data
     },
   })
@@ -55,7 +55,7 @@ export default function AdminSettingsPage() {
   // Update settings mutation
   const updateSettingsMutation = useMutation({
     mutationFn: async (data: PGSettingsFormData) => {
-      const response = await client.patch(('/pg/profile/', {
+      const response = await client.patch('/pg/profile/', {
         property_name: data.property_name,
         address: data.address,
         contact_number: data.contact_number,
