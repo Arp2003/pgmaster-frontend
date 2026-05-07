@@ -3,12 +3,12 @@ import axios, { AxiosInstance, AxiosError } from 'axios'
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL ||
   "https://pgmaster-backend-production.up.railway.app/api/v1";
-const client: AxiosInstance = axios.create({
+const client = axios.create({
   baseURL: API_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
-})
+});
 
 // Request interceptor
 client.interceptors.request.use((config) => {
