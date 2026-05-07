@@ -28,7 +28,7 @@ export default function DashboardPage() {
 
   const fetchStats = async () => {
     try {
-      const res = await client.get('/pg/dashboard/') // backend API
+      const res = await client.get('/pg/profile/dashboard/') // backend API
       setStats({
         totalRooms: res.data.total_rooms || 0,
         totalBeds: res.data.total_beds || 0,
