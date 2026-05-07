@@ -1,8 +1,8 @@
 import axios, { AxiosInstance, AxiosError } from 'axios'
 
 const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'https://thepgmaster.com/api/v1'
-
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://pgmaster-backend-production.up.railway.app/api/v1";
 const client: AxiosInstance = axios.create({
   baseURL: API_URL,
   headers: {
